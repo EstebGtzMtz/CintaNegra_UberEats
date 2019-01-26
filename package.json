@@ -1,0 +1,26 @@
+{
+  "name": "ubereats",
+  "version": "1.0.0",
+  "description": "Proyecto Cinta Negra DevF",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "watch": "nodemon -e js,graphql app.js",
+    "lint": "eslint app/"
+  },
+  "author": "Esteban Uriel Gutiérrez Martínez",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^3.0.3",
+    "eslint": "^5.12.1",
+    "graphql-import": "^0.7.1",
+    "graphql-tools": "^4.0.4",
+    "graphql-yoga": "^1.17.0",
+    "jsonwebtoken": "^8.4.0",
+    "mongoose": "^5.4.6",
+    "morgan": "^1.9.1",
+    "node-pre-gyp": "^0.12.0"
+  },
+  "devDependencies": {}
+}
