@@ -19,7 +19,7 @@ const ENVS = {
     production:{
         SECRET_KEY: procces.env.SECRET_KEY,
         db:{
-            url: procces.env.MONGO_URL
+            url: proccess.env.MONGO_URL
         }
     }
 }

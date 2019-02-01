@@ -1,4 +1,4 @@
-const {GraphQLServer} = require ("graphql-yoga");
+const {GraphQLServer, PubSub} = require ("graphql-yoga");
 const resolvers = require("./resolvers");
 const {importSchema} = require("graphql-import");
 const {makeExecutableSchema} = require("graphql-tools");
@@ -6,6 +6,7 @@ const typeDefs = importSchema("./schema.graphql");
 const mongoose = require("mongoose");
 
 const {db} = require("./config");
+const pubsub = new PubSub();
 
 mongoose.connect(db.url, {useNewUrlParser: true});
 const mongo = mongoose.connection;
@@ -21,7 +22,7 @@ const schema = makeExecutableSchema({
 
 const server = new GraphQLServer({
     schema,
-    context : req => ({...req})
+    context : req => ({...req, pubsub})
 });
 
 const options = {

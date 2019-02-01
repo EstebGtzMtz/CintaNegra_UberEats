@@ -34,9 +34,18 @@ type Restaurant{
     is_active: Boolean
 }
 
+
 enum GENDER{
     Male
     Female
 }
 
+type Subcriptions {
+    newComment: Comment!
+    newprivateComment: Comment!
+}
 
+type Comment {
+    id: Ind!
+    text: String!
+}
