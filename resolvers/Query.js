@@ -65,5 +65,6 @@ module.exports={
     Users,
     User,
     Restaurants,
-    RestaurantId
+    RestaurantId,
+    Food
 };
