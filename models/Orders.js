@@ -3,10 +3,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const OrdersSchema = new Schema({
-    id_user:{
-        type: Schema.Types.ObjectId,
-        ref: "users"
-    },
     id_rest:{
         type: Schema.Types.ObjectId,
         ref: "restaurants"

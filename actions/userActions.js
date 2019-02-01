@@ -8,7 +8,7 @@ const getAllUsers = () =>{
     return User.find({is_active:true});
 };
 
-const getUserByEmail = (data) =>{
+const getUserByEmail = (email) =>{
     return User.findOne({email:email});
 };
 

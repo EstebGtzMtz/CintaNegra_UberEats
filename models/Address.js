@@ -2,11 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const AddressSchema = new Schema=({
-    id:{
-        type: Number,
-        required: true
-    },
+const AddressSchema = new Schema({  
     street:{
         type: String,
         require: true

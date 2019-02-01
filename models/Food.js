@@ -4,10 +4,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const FoodSchema = new Schema({
-    id:{
-        type:Number,
-        require: true
-    },
     name:{
         type: String,
         required: true
@@ -26,7 +22,7 @@ const FoodSchema = new Schema({
     },
     id_rest:{
         type: Schema.Types.ObjectId,
-        ref="restaurants"
+        ref:"restaurants"
     },
     is_Active:{
         type: Boolean,

@@ -16,4 +16,9 @@ const deleteOrderById = (id) => {
     return Orders.finnByIdAndUpdate({_id:id, is_active: false});
 };
 
-
+module.exports={
+    createOrder,
+    getAllOrders,
+    updateOrderById,
+    deleteOrderById
+}

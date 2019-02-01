@@ -95,3 +95,7 @@ typings/
 .history
 
 # End of https://www.gitignore.io/api/node,visualstudiocode
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

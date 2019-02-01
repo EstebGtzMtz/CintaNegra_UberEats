@@ -7,10 +7,6 @@ const SALT_FACTOR = 10;
 const Schema = mongoose.Schema;
 
 const UserSchema = new Schema({
-    id:{
-        type: Number,
-        required: true
-    },
     name:{
         type: String,
         required: true
@@ -50,6 +46,9 @@ const UserSchema = new Schema({
         type: Schema.Types.ObjectId,
         ref:"address"
     },
+    profile_image:{
+        type: String
+    },
     is_active:{
         type: Boolean,
         default: true
@@ -67,9 +66,6 @@ UserSchema.pre("save", function (next) {
 			next();
 		});
 	});
-
-
-
 });
 
 mongoose.Types.ObjectId.prototype.valueOf = function () {

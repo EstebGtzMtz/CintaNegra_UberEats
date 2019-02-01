@@ -4,10 +4,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const RestaurantsSchema = new Schema({
-    id:{
-        type: Schema.Types.ObjectId,
-        ref: "address"
-    },
     name:{
         type: String,
         required: true
@@ -27,6 +23,10 @@ const RestaurantsSchema = new Schema({
     img_logo:{
         type: String,
         required: true
+    },
+    address_id:{
+        type: Schema.Types.ObjectId,
+        ref: "address"
     },
     is_active:{
         type: Boolean,

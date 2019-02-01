@@ -10,11 +10,17 @@ const ENVS = {
     },
 
     test:{
-
+        SECRET_KEY: "OSOJUDIO",
+        db:{
+            url:"mongodb://EstebanTest:g13143099@ds143603.mlab.com:43603/ubereats_cintanegra_test"
+        },
     },
 
     production:{
-
+        SECRET_KEY: procces.env.SECRET_KEY,
+        db:{
+            url: procces.env.MONGO_URL
+        }
     }
 }
 

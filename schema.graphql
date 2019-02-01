@@ -1,9 +1,42 @@
+scalar Upload
+
 type Query {
     Users:[User]
+    User(id:ID!):User
+    Restaurants:[Restaurant]
+    RestaurantId(id:ID!):Restaurant
+}  
+
+type Mutations{
+    signup:User
+}
+
+type Auth{
+	token:String
+	message:String
 }
 
 type User{
     _id: ID
     name: String
     last_name: String
+    mlast_name: String
+    email: String
+    gender: GENDER
+    is_active: Boolean
 }
+
+type Restaurant{
+    _id: ID
+    name: String
+    description: String
+    time: String
+    is_active: Boolean
+}
+
+enum GENDER{
+    Male
+    Female
+}
+
+
