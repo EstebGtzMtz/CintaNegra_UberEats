@@ -40,12 +40,4 @@ enum GENDER{
     Female
 }
 
-type Subcriptions {
-    newComment: Comment!
-    newprivateComment: Comment!
-}
 
-type Comment {
-    id: Ind!
-    text: String!
-}
