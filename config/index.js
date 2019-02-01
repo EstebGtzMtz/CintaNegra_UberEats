@@ -16,11 +16,11 @@ const ENVS = {
         },
     },
 
-    production:{
-        SECRET_KEY: proccess.env.SECRET_KEY,
-        db:{
-            url: proccess.env.MONGO_URL
-        }
+    production: {
+		SECRET_KEY: process.env.SECRET_KEY,
+		db: {
+			url: process.env.MONGO_URL
+		}
     }
 }
 
